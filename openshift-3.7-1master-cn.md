@@ -407,6 +407,10 @@ OpenShfit的安装通过Ansible自动完成，因此需要先安装Ansible及Ope
 	oreg_url=registry.example.com/openshift3/ose-${component}:${version}
 	openshift_examples_modify_imagestreams=true
 	
+	# Default is v3.7, you must Force a specific image version same as your image tag
+	# to use when pulling the service catalog image
+	openshift_service_catalog_image_version=v3.7.9
+
 	openshift_clock_enabled=true
 	
 	openshift_hosted_router_replicas=1
